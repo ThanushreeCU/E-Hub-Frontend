@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://ThanushreeCU.github.io/TY_TechElevate_TrainingMaintenance_Thanushree/ty-styles-table.css">
+    <!-- <link rel="stylesheet" type="text/css"
+    href="https://ThanushreeCU.github.io/TY_TechElevate_TrainingMaintenance_Thanushree/ty-styles-form.css"> -->
+</head>
+
+<body>
+  <!-- <button type="button" class="float-right ty-download"><i class="fa fa-download" aria-hidden="true"></i></button>
+    <button type="submit" class="float-right ty-print"><i class="fas fa-print"></i></button> -->
+  <div class="container col-md-10 offset-1">
+    <div class="mt-4">
+      <h3 class="ty-heading">Package Details</h3>
+      <table class="table table-hover table-bordered">
+        <thead class="text-white ty-header">
+          <tr>
+              <td>Client Name</td>
+              <td>Employee Name</td>
+            <td>Date of Payment by TY</td>
+            <td>Date of Payment by Client</td>
+            <td>Rate card by TY</td>
+            <td>Rate card by Client</td>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let package of packageDetails" 
+            >
+            <td>{{package.clientName}}</td>
+            <td>{{package.employeeName}}</td>
+            <td>{{package.dateOfPaymentByTY}}</td>
+            <td>{{package.dateOfPaymentByClient}}</td>
+            <td>{{package.rateCardByTY}}</td>
+            <td>{{package.rateCardByClient}}</td>
+          
+            <!-- <td><button type="button" class="btn btn-outline-danger" (click)='deleteClient(data._id)'>Delete</button></td> -->
+          </tr>
+
+
+        </tbody>
+        
+      </table>
+      <!-- <div class="modal fade bd-example-modal-xl" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title ty-font" id="exampleModalLabel" style="font-size:25px;font-weight: bold;">Update
+              Client Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container mt-5">
+              <div class="col-md-10">
+
+
+                <form action="" method="post" #form="ngForm">
+                  <input type="hidden" name="_id" #_id='ngModel' [(ngModel)]="clientDetails._id" ngModel>
+                  <div class="form-row mt-3">
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                      <input type="text" class="form-control  inputText" id="clientName" name="clientName"
+                        #clientName="ngModel" [(ngModel)]="clientDetails.clientName" ngModel>
+                      <span class="floating-label">Client Name</span>
+
+                    </div>
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                      <input type="text" class="form-control  inputText" id="clientShortName" name="clientShortName"
+                        #clientShortName="ngModel" ngModel [(ngModel)]="clientDetails.clientShortName">
+                      <span class="floating-label">Client Short Name</span>
+
+                    </div>
+                  </div>
+
+
+                  <div class="form-row mt-3">
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                      <select class="form-control  inputText" id="department" name="department"
+                        #department='ngModel' ngModel [(ngModel)]="clientDetails.department">
+                        <span class="floating-label">Department</span>
+
+                        <option value="" selected>Department</option>
+                        <option>Development</option>
+                        <option>Testing</option>
+                        <option>Datascience</option>
+                        <option>Others</option>
+                      </select>
+
+
+                    </div>
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                      <input type="text" class="form-control  inputText" id="email" name="email" #email="ngModel"
+                        ngModel [(ngModel)]="clientDetails.email">
+                      <span class="floating-label">Email</span>
+
+                    </div>
+
+                  </div>
+                  <div class="form-row mt-3">
+
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+
+                      <input type="number" class="form-control  inputText" id="phone" name="phone" #phone="ngModel"
+                        ngModel [(ngModel)]="clientDetails.phone">
+                      <span class="floating-label">Phone no</span>
+
+                    </div>
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+
+                      <input type="text" class="form-control  inputText" id="website" name="website"
+                        #website="ngModel" ngModel [(ngModel)]="clientDetails.website">
+                      <span class="floating-label">Client Website</span>
+
+                    </div>
+                <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                          <input type="file" accept="image/*" class="form-control  inputText " id="clientLogo" name="clientLogo"
+                          #clientLogo="ngModel"  ngModel  [(ngModel)]="clientDetails.clientLogo">
+                        <span class="floating-label">Upload Client Logo</span>
+                       
+                       </div> -->
+                  <!-- </div> -->
+                  <!-- <div class="form-row mt-3">
+
+                    
+
+                  </div> -->
+
+                  <!-- <label for="title" class="ty-font" style="font-size:25px;font-weight: bold;">Client
+                    Address</label>
+                  <div class="form-row mt-3">
+
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+
+                      <input type="text" class="form-control  inputText" id="streetaddress" name="streetaddress"
+                        #streetaddress="ngModel" ngModel [(ngModel)]="clientDetails.streetaddress">
+                      <span class="floating-label">Street Address</span>
+
+                    </div>
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                      <input type="text" class="form-control  inputText" id="city" name="city" #city="ngModel"
+                        ngModel [(ngModel)]="clientDetails.city">
+                      <span class="floating-label">City</span>
+
+                    </div>
+                  </div>
+
+                  <div class="form-row mt-3">
+
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                      <input type="text" class="form-control  inputText" id="state" name="state" #state="ngModel"
+                        ngModel [(ngModel)]="clientDetails.state">
+                      <span class="floating-label">State/Region/Province</span>
+
+
+                    </div>
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                      <input type="text" class="form-control  inputText" id="zip" name="zip" #zip="ngModel" ngModel
+                        [(ngModel)]="clientDetails.zip">
+                      <span class="floating-label">Zip Code</span>
+
+                    </div>
+                  </div>
+
+                  <div class="form-row mt-3">
+
+                    <div class="form-group col-md-6 ty-font user-input-wrp"> <br />
+                      <input type="text" class="form-control  inputText" id="country" name="country"
+                        #country="ngModel" ngModel [(ngModel)]="clientDetails.country">
+                      <span class="floating-label">Country</span>
+
+
+                    </div>
+
+                  </div>
+
+                  <div class="float-right ty-create-button">
+                    <button type="submit" class="btn btn-primary ty-font mr-2 " data-dismiss="modal"
+                      (click)="updateClients(form.value)">Update </button>
+
+                    <button type="button" class="btn btn-danger ty-font" 
+                    data-toggle="modal" data-target=".bd-example-modal-sm">Delete</button>
+                      <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title ty-font" id="exampleModalLabel" style="font-size:25px;font-weight: bold;">Delete
+                                Client Details</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Are you sure you want to delete client Details ?</p>
+                            <button type="submit" class="btn btn-danger ty-font" data-dismiss="modal"
+                      (click)="deleteClient(form.value._id)">Delete</button>
+                    </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+
+
+
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div> --> 
+    </div>
+  </div>
+  <div class=" mt-4 mb-4" id="ty-pagination">
+    <jw-pagination [items]="packageitems" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>
+</body>
+
+</html>

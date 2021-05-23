@@ -1,0 +1,15 @@
+<div class="row offset-3 mt-5">
+    <div *ngFor="let image of images">
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" routerLink='/clientsdata'>
+            <img id="imgId" src="http://localhost:4000/static/assets/uploads/{{ image.image }}" class="rounded border  border-info ml-4" style="border-radius: 20px;"><br></a>
+       <div *ngFor='let count of billableClientsCount'>
+           <div *ngIf='image.clientId===count._id.clientId'>
+               <h1 class="text-center">{{count.count}}</h1>
+           </div>
+       </div>
+        <!-- <h1 class="text-center text-white bg-dark">{{image.name}}</h1>
+        <h3 class="text-center text-white bg-dark">{{image.username}}</h3> -->
+    </div>
+   
+</div>
+
